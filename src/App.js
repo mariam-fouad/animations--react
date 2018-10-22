@@ -22,9 +22,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>React Animations</h1>
-        <Modal isOpen={this.state.isModalOpen} />
+        <Modal isOpen={this.state.isModalOpen} closed={this.closeModal}/>
         <Backdrop isOpen={this.state.isModalOpen} />
-        <button className="Button">Open Modal</button>
+        <button className="Button" onClick={this.openModal}>Open Modal</button>
         <h3>Animating Lists</h3>
         <List />
       </div>
