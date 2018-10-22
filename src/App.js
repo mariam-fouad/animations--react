@@ -6,12 +6,17 @@ import Backdrop from "./components/Backdrop/Backdrop";
 import List from "./components/List/List";
 
 class App extends Component {
+
+  state = {
+    isModalOpen: false,
+  }
+
   render() {
     return (
       <div className="App">
         <h1>React Animations</h1>
-        <Modal />
-        <Backdrop />
+        <Modal isOpen={this.state.isModalOpen} />
+        <Backdrop isOpen={this.state.isModalOpen} />
         <button className="Button">Open Modal</button>
         <h3>Animating Lists</h3>
         <List />
