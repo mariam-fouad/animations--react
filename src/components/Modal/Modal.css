@@ -14,11 +14,11 @@
 }
 
 .Modal--close{
-    animation: closeModal 0.4s forwards;
+    animation: closeModal 0.9s forwards;
 }
 
 .Modal--open{
-    animation: openModal 0.4s forwards;
+    animation: openModal 0.9s forwards;
 }
 
 @keyframes openModal {
