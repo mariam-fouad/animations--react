@@ -11,3 +11,11 @@
     left: 25%;
     width: 50%;
 }
+
+.Modal--close{
+    display: none;
+}
+
+.Modal--open{
+    display: block;
+}
