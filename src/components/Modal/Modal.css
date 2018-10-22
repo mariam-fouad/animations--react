@@ -10,12 +10,15 @@
     top: 30%;
     left: 25%;
     width: 50%;
+    transition: all .3s ease-out;
 }
 
 .Modal--close{
-    display: none;
+    transform: translateY(-100vh);
+    opacity: 0;
 }
 
 .Modal--open{
-    display: block;
+    transform: translateY(0);
+    opacity: 1;
 }
