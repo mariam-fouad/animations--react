@@ -11,6 +11,13 @@ class App extends Component {
     isModalOpen: false,
   }
 
+  openModal = ()=>{
+    this.setState({isModalOpen: true});
+  }
+
+  closeModal = ()=>{
+    this.setState({isModalOpen: false});
+  }
   render() {
     return (
       <div className="App">
