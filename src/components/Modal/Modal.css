@@ -13,12 +13,20 @@
     transition: all .3s ease-out;
 }
 
-.Modal--close{
+/* .Modal--close{
     animation: closeModal 0.9s forwards;
 }
 
 .Modal--open{
     animation: openModal 0.9s forwards;
+} */
+
+.fade-Modal-enter-active {
+    animation: openModal 0.9s forwards;
+}
+
+.fade-Modal-exit-active{
+    animation: closeModal 0.9s forwards;
 }
 
 @keyframes openModal {
