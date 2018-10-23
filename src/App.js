@@ -9,6 +9,7 @@ class App extends Component {
 
   state = {
     isModalOpen: false,
+    isBlockShowen:false,
   }
 
   openModal = ()=>{
@@ -22,6 +23,15 @@ class App extends Component {
     return (
       <div className="App">
         <h1>React Animations</h1>
+        <button 
+        className="Button" 
+        onClick={()=>{this.setState(prevState=>({isBlockShowen: !prevState.isBlockShowen}))}}>
+          Toggle
+        </button>
+        {this.state.isBlockShowen? 
+        <div></div>
+        :null}
+        <br/>
         {this.state.isModalOpen? <Modal isOpen={this.state.isModalOpen} closed={this.closeModal}/> : null}
         {this.state.isModalOpen? <Backdrop isOpen={this.state.isModalOpen} /> : null}
         <button className="Button" onClick={this.openModal}>Open Modal</button>
