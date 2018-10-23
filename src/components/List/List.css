@@ -16,6 +16,21 @@
     cursor: pointer;
 }
 
+.ListItem--enter{
+    opacity: 0;
+}
+.ListItem--enter{
+    opacity: 1;
+    transition: opacity .9s ease-out;
+}
+.ListItem--exit{
+    opacity: 1;
+}
+.ListItem--exiting{
+    opacity: 0;
+    transition: opacity .9s ease-out;
+}
+
 .ListItem:hover,
 .ListItem:active {
     background-color: #ccc;
