@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Transition from 'react-transition-group/Transition';
 
 import "./App.css";
 import Modal from "./components/Modal/Modal";
@@ -28,15 +29,23 @@ class App extends Component {
         onClick={()=>{this.setState(prevState=>({isBlockShowen: !prevState.isBlockShowen}))}}>
           Toggle
         </button>
-        {this.state.isBlockShowen? 
-        <div style={{
-          backgroundColor:'red',
-          margin:'auto',
-          width:100,
-          height:100,
-          opacity:1,
-        }}></div>
-        :null}
+        <Transition 
+        in={this.state.isBlockShowen} 
+        timeout={1000}
+        mountOnEnter
+        unmountOnExit>
+          {state=>(
+            <div style={{
+              backgroundColor:'red',
+              margin:'auto',
+              width:100,
+              height:100,
+              transition: 'opacity 1s ease-out',
+              opacity:(state==='entering'||state==='exiting')?'0':'1',
+            }}>
+            </div>
+          )}
+        </Transition>
         <br/>
         {this.state.isModalOpen? <Modal isOpen={this.state.isModalOpen} closed={this.closeModal}/> : null}
         {this.state.isModalOpen? <Backdrop isOpen={this.state.isModalOpen} /> : null}
