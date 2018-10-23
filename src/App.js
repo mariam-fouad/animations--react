@@ -48,7 +48,7 @@ class App extends Component {
         </Transition>
         <br/>
         <Transition
-        in={this.state.isBlockShowen} 
+        in={this.state.isModalOpen} 
         timeout={900}
         mountOnEnter
         unmountOnExit>
