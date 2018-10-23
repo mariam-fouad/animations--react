@@ -29,7 +29,13 @@ class App extends Component {
           Toggle
         </button>
         {this.state.isBlockShowen? 
-        <div></div>
+        <div style={{
+          backgroundColor:'red',
+          margin:'auto',
+          width:100,
+          height:100,
+          opacity:1,
+        }}></div>
         :null}
         <br/>
         {this.state.isModalOpen? <Modal isOpen={this.state.isModalOpen} closed={this.closeModal}/> : null}
